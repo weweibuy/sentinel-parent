@@ -276,6 +276,7 @@ public class FlowControllerV1 {
             rulePublisher.publish(app, rules);
             return true;
         } catch (Exception e) {
+            logger.warn("发布配置失败", e);
             return false;
         }
 
